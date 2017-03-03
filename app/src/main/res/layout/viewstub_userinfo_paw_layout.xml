@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pwd_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/user_login_password_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/persion_layout_click_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="15dp"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/user_info_item_menu_tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/user_login_password_str" />
+
+        <TextView
+            android:id="@+id/user_login_password_tv"
+            style="@style/persion_item_menu_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text=""
+            android:textColor="@color/right_tip_textcolor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/user_pay_password_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/persion_layout_click_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="15dp"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/user_info_item_menu_tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/user_pay_password_str" />
+
+        <TextView
+            android:id="@+id/user_paypassword_tv"
+            style="@style/persion_item_menu_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text=""
+            android:textColor="@color/right_tip_textcolor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

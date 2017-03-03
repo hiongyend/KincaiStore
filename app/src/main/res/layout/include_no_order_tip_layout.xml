@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:id="@+id/no_order_tip_ll"
+    android:visibility="gone"
+    android:orientation="vertical" >
+    
+    
+    <ImageView 
+        android:id="@+id/order_no_order_iv"
+        android:contentDescription="@string/androidimageview"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="66dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:src="@drawable/usercenter_order"/>
+    
+    <TextView 
+        android:id="@+id/order_no_order_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/no_xiangguan_order_str"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/layout_textcolor"/>
+    
+    <Button 
+        android:id="@+id/order_no_netword_btn"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone"
+        android:textColor="@color/layout_textcolor"
+        android:background="@drawable/dialog_btn_left_bg"
+        android:layout_height="wrap_content"
+        android:text="@string/reLoad_str"/>
+
+</LinearLayout>

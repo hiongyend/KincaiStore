@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/titlebar_rl"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <LinearLayout
+        android:id="@+id/collect_guide_ll"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:background="@color/activity_titlebar_bgcolor"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/collect_default_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:id="@+id/collect_default_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="#00ffffff"
+                android:gravity="right|center_vertical"
+                android:text="@string/default_str"
+                android:textColor="@drawable/tab_text_color"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/popupw_change_iv"
+                android:layout_width="8dp"
+                android:layout_height="4dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/collect_default_tv"
+                android:contentDescription="@string/androidimageview"
+                android:src="@drawable/follow_accounts_up" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/collect_failure_rl_"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/collect_failure_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="#00ffffff"
+                android:gravity="center"
+                android:text="@string/failure_str"
+                android:textColor="@drawable/tab_text_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/collect_search_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="14dp" >
+
+            <ImageView
+                android:id="@+id/search_result_filtrate_head_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00ffffff"
+                android:contentDescription="@string/androidimageview"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.kincai.store.view.custom.HomeListview
+        android:id="@+id/collect_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/collect_guide_ll"
+        android:divider="#e8e6e6"
+        android:dividerHeight="0.5dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/collect_tip_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/collect_guide_ll"
+        android:background="@color/fragment_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/collect_tip_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#605f5f"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/collect_tip_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="#605f5f"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/collect_not_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/cart_collect_tip_btn_bg"
+            android:text="@string/at_once_str"
+            android:textColor="#605f5f"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/loading_progress_big_layout" />
+
+</RelativeLayout>

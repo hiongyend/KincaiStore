@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/store_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/persion_layout_click_bg"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/store_logo_iv"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/androidimageview"
+            android:scaleType="fitXY"
+            android:src="@color/white" />
+        
+        <TextView 
+            android:id="@+id/store_name_tv"
+            android:layout_alignBaseline="@id/store_logo_iv"
+            android:layout_toRightOf="@id/store_logo_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+        
+        
+        <ImageView
+            android:id="@+id/store_xinyong_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_toRightOf="@id/store_logo_iv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/store_name_tv"
+            android:contentDescription="@string/androidimageview"
+             />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingTop="3dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            
+            <TextView 
+                android:id="@+id/store_all_pro_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="12sp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="36dp"
+                android:background="@color/tab_viewline_color" />
+
+            <TextView 
+                android:id="@+id/store_atten_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="36dp"
+                android:background="@color/tab_viewline_color" />
+
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            
+            <TextView 
+                android:id="@+id/store_desc_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textColor="@color/layout_textcolor"
+                android:text=""/>
+            <TextView 
+                android:id="@+id/store_seller_service_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textColor="@color/layout_textcolor"
+                android:text=""/>
+            <TextView 
+                android:id="@+id/store_wuliu_service_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="12sp"
+                android:text=""/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/store_jindian_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/jindian_guang_str"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/btn_red_pressed_color"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/dialog_btn_left_bg"/>
+    
+    <View
+        android:id="@+id/view22"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/view_line_color" />
+
+</LinearLayout>

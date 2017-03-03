@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <include
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/network_abnormal_top_layout"
+        layout="@layout/include_register_login_top_layout" />
+
+    <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+        android:id="@+id/username_et"
+        style="@style/login_edittext"
+        android:layout_height="50dp"
+        android:layout_below="@id/top_ll"
+        android:layout_marginTop="5dp"
+        android:drawableRight="@drawable/ic_search_cancel"
+        android:hint="@string/please_input_username_str"
+        android:text="" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/username_et"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#d8d6d6" />
+
+    <LinearLayout
+        android:id="@+id/pwd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+            android:id="@+id/password_et"
+            style="@style/login_edittext"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/ic_search_cancel"
+            android:hint="@string/please_input_password_str"
+            android:inputType="textPassword"
+            android:text="" />
+
+        <ToggleButton
+            android:id="@+id/pwd_toggle_btn"
+            android:layout_width="57dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/pwd_et_toggle_btn_selector"
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pwd_ll"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dialog_btn_left_bg"
+        android:enabled="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/register_str"
+        android:textColor="@color/dialog_textcolr"
+        android:textSize="18sp" />
+
+</RelativeLayout>

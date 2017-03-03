@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <Button
+        android:id="@+id/address_add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="2dp"
+        android:background="@drawable/btn_red_select_bg"
+        android:enabled="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/new_address_str"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/address_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/address_add_btn"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:divider="#f0f0f0"
+        android:dividerHeight="0.2dp"
+        android:visibility="visible" >
+    </ListView>
+
+    <include layout="@layout/loading_progress_big_layout" />
+
+</RelativeLayout>

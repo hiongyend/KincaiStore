@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp" 
+    android:background="@color/white" >
+    
+    <Button 
+        android:id="@+id/guanbi_delete_order_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/delete_order_str"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="9dp"
+        android:textColor="@color/dialog_textcolr"
+        android:textSize="13sp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/dialog_btn_left_bg"/>
+
+</RelativeLayout>

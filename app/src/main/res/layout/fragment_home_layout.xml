@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:orientation="vertical" >
+
+    <com.kincai.store.view.custom.HomeListview
+        android:id="@+id/pro_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#e8e6e6"
+        android:fastScrollEnabled="true"
+        android:listSelector="@null" />
+
+    <RelativeLayout
+        android:id="@+id/home_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#e73b53"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/home_scan_title_rl"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/androidimageview"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_scan_str"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_msg_title_rl"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@string/androidimageview"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_new" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_msg_str"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/home_search_goods_et"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/home_msg_title_rl"
+            android:layout_toRightOf="@id/home_scan_title_rl"
+            android:background="@drawable/home_search_et_bg"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:focusable="false"
+            android:hint="@string/find_goods"
+            android:padding="4dp"
+            android:paddingLeft="5dp"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/home_title_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <include
+        android:id="@+id/loading_mini_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/network_abnormal_top_layout"
+        layout="@layout/loading_progress_mini_layout" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp" >
+
+        <ImageButton
+            android:id="@+id/back_to_top_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/androidimageview"
+            android:src="@drawable/ic_back_to_top"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

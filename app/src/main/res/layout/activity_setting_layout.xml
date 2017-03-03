@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@drawable/logistics_split_shadow" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view0"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <Button
+        android:id="@+id/exit_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btn_red_select_bg"
+        android:enabled="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/exit_login_str"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/exit_login"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckedTextView
+                android:id="@+id/message_warn_ctv"
+                style="@style/checkedTextView_setting"
+                android:layout_alignParentTop="true"
+                android:text="@string/message_warm_str" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/message_warn_ctv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/view_line_color" />
+
+            <CheckedTextView
+                android:id="@+id/wifi_automatic_upgrade_ctv"
+                style="@style/checkedTextView_setting"
+                android:layout_below="@id/view1"
+                android:text="@string/wifi_automatic_upgrade_str" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/wifi_automatic_upgrade_ctv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/view_line_color" />
+
+            <!-- <CheckedTextView
+                android:id="@+id/change_light_ctv"
+                style="@style/checkedTextView_setting"
+                android:layout_below="@id/view2"
+                android:text="@string/change_light_str" /> -->
+
+           <!--  <LinearLayout
+                android:id="@+id/change_light_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:gravity="center_vertical"
+                android:padding="0dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/androidimageview"
+                    android:padding="10dp"
+                    android:src="@drawable/main_bottom_tab_category_focus" />
+
+                <com.kincai.store.view.custom.ScrollSeekBar
+                    android:id="@+id/change_light_sb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progress="0" />
+
+                <ImageView
+                    android:id="@+id/change_light_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/androidimageview"
+                    android:padding="10dp"
+                    android:src="@drawable/main_bottom_tab_category_focus" />
+            </LinearLayout> -->
+
+            <LinearLayout
+                android:id="@+id/picture_mode_setting_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:orientation="vertical" >
+
+                <CheckedTextView
+                    android:id="@+id/picture_mode_ctv"
+                    style="@style/checkedTextView_setting"
+                    android:layout_marginTop="15dp"
+                    android:checkMark="@drawable/pwd_toggle_button_selector"
+                    android:checked="false"
+                    android:text="@string/picture_mode"
+                    android:textSize="14sp" />
+
+                <ViewStub
+                    android:id="@+id/ViewStub_picture_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/viewstub_setting_picture_mode_layout" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/picture_mode_setting_ll"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/view_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/helper_rl"
+                style="@style/relativelayout_setting"
+                android:layout_below="@id/view6"
+                android:background="@drawable/persion_layout_click_bg" >
+
+                <TextView
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/help_serve_str" />
+
+                <TextView
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/helper_rl"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/view_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/clear_cache_rl"
+                style="@style/relativelayout_setting"
+                android:layout_below="@id/view4"
+                android:background="@drawable/persion_layout_click_bg" >
+
+                <TextView
+                    style="@style/persion_item_menu_tv"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/clear_cache_str" />
+
+                <TextView
+                    android:id="@+id/cache_number_tv"
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:text=""
+                    android:textColor="@color/right_tip_textcolor"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/check_upgrade_rl"
+                style="@style/relativelayout_setting"
+                android:layout_below="@id/clear_cache_rl"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/persion_layout_click_bg" >
+
+                <TextView
+                    android:id="@+id/check_upgrade_tv"
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/check_grade_str" />
+
+                <TextView
+                    android:id="@+id/check_upgrade_present_version_tv"
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:text=""
+                    android:textColor="@color/right_tip_textcolor"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/check_upgrade_rl"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/view_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/about_rl"
+                style="@style/relativelayout_setting"
+                android:layout_below="@id/view5"
+                android:background="@drawable/persion_layout_click_bg" >
+
+                <TextView
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about" />
+
+                <TextView
+                    style="@style/persion_item_menu_tv"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:text="" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

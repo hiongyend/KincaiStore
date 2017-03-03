@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <ImageView
+        android:id="@+id/titlebar_chose_iv"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/web_title_chose_bg"
+        android:contentDescription="@string/action_settings"
+        android:padding="5dp" />
+
+    <ImageView
+        android:id="@+id/titlebar_refresh_iv"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@id/titlebar_chose_iv"
+        android:background="@drawable/web_refresh_nor"
+        android:contentDescription="@string/action_settings"
+        android:padding="5dp" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <WebView
+        android:id="@+id/adv_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/network_abnormal_top_layout" />
+
+</RelativeLayout>

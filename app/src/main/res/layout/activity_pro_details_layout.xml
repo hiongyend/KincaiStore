@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_titlebar_layout" />
+
+    <ImageView
+        android:id="@+id/pro_more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:contentDescription="@string/androidimageview"
+        android:src="@drawable/web_more_nor" />
+
+    <ImageView
+        android:id="@+id/pro_cart_iv"
+        android:layout_width="25dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/pro_more_iv"
+        android:contentDescription="@string/androidimageview"
+        android:src="@drawable/icon_titlebar_cart_normal" />
+
+    <TextView
+        android:id="@+id/pro_cart_num_tv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/pro_more_iv"
+        android:background="@drawable/im_recently_message_count_one"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tip_mini_text" />
+    
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <LinearLayout
+        android:id="@+id/pro_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/pro_contact_tv"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="3"
+            android:drawableLeft="@drawable/flow_profile_phone_icon"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="3dp"
+            android:text="@string/contact_the_seller_str"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/pro_add_cart_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2"
+            android:background="@drawable/pro_bottom_button_bg"
+            android:text="@string/add_cart_str"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/pro_buy_it_now_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2"
+            android:background="@drawable/cart_bottom_button_bg"
+            android:text="@string/buy_it_now_str"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/pro_bottom_ll"
+        android:background="@color/tab_viewline_color" />
+    
+    <com.kincai.store.view.custom.ScrollViewContainer
+        android:id="@+id/ScrollViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_bottom"
+        android:layout_below="@id/network_abnormal_top_layout" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <com.kincai.store.view.custom.ProShowView
+                    android:id="@+id/details_pro_showview"
+                    android:layout_width="match_parent"
+                    android:layout_height="358dp"
+                    android:visibility="visible" >
+                </com.kincai.store.view.custom.ProShowView>
+
+                <LinearLayout
+                    android:id="@+id/pro_pname_and_collet_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/details_pro_showview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/pro_name"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/tab_viewline_color" />
+
+                    <TextView
+                        android:id="@+id/pro_collect_tv"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/ic_web_favor_normal"
+                        android:gravity="center"
+                        android:text="@string/collect_str"
+                        android:textColor="@color/layout_textcolor"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/pro_pname_and_collet_ll"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/tab_viewline_color" />
+
+                <TextView
+                    android:id="@+id/pro_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="3dp"
+                    android:textColor="@color/pro_list_price_color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/pro_yuan_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pro_price_tv"
+                    android:layout_marginLeft="12dp"
+                    android:padding="3dp"
+                    android:textColor="@color/right_tip_textcolor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pro_kuaidi_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pro_yuan_price_tv"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:textColor="@color/right_tip_textcolor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/pro_sales_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pro_yuan_price_tv"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/pro_kuaidi_address_tv"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textColor="@color/right_tip_textcolor"
+                    android:textSize="12sp" />
+
+                <View
+                    android:id="@+id/view0"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/pro_sales_tv"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/pro_pullup_details_bg" />
+
+                <TextView
+                    android:id="@+id/pro_evaluate_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view0"
+                    android:background="@drawable/persion_layout_click_bg"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/layout_textcolor"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/pro_evaluate_tv"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/tab_viewline_color" />
+
+                <RelativeLayout
+                    android:id="@+id/evaluate_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view2" >
+
+                    <TextView
+                        android:id="@+id/pro_evaluate_one_user_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/layout_textcolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/pro_evaluate_one_content_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pro_evaluate_one_user_tv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/layout_textcolor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/pro_evaluate_one_time_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pro_evaluate_one_content_tv"
+                        android:layout_marginLeft="14dp"
+                        android:textColor="@color/right_tip_textcolor"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/pro_evaluate_one_time_tv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/tab_viewline_color" />
+
+                    <TextView
+                        android:id="@+id/pro_check_more_evaluate_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view3"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:text="@string/check_more_evaluate_str"
+                        android:textColor="@color/layout_textcolor"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                
+                 <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/evaluate_rl"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/pro_pullup_details_bg" />
+                
+                <include 
+                    android:layout_below="@id/view4"
+                    android:id="@+id/store_ll"
+                    android:layout_width="match_parent"
+    				android:layout_height="wrap_content"
+                    layout="@layout/include_pro_detail_store_layout"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/store_ll"
+                    android:background="@color/pro_pullup_details_bg"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/check_pro_details"
+                    android:textColor="@color/right_tip_textcolor" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="96dp" >
+
+                <LinearLayout
+                    android:id="@+id/pro_scroll2_top_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/pro_graphic_details_tv"
+                        style="@style/pro_tab_tv"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/graphic_details_str" />
+
+                    <TextView
+                        android:id="@+id/pro_recommend_tv"
+                        style="@style/pro_tab_tv"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/pro_recommend_str" />
+
+                    <TextView
+                        android:id="@+id/pro_buy_history"
+                        style="@style/pro_tab_tv"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/sale_history_str" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pro_top_iv_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/pro_scroll2_top_ll"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/pro_iv1"
+                        style="@style/pro_tab_iv"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/androidimageview" />
+
+                    <ImageView
+                        android:id="@+id/pro_iv2"
+                        style="@style/pro_tab_iv"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/androidimageview" />
+
+                    <ImageView
+                        android:id="@+id/pro_iv3"
+                        style="@style/pro_tab_iv"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/androidimageview" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pro_fragment_content_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/pro_scroll2_top_ll" >
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </com.kincai.store.view.custom.ScrollViewContainer>
+    
+    <View 
+        android:id="@+id/vvv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <RelativeLayout
+        android:id="@+id/tt_robot_rl"
+        style="@style/layout_item"
+        android:layout_below="@id/network_abnormal_top_layout" >
+
+        <TextView
+            style="@style/persion_item_menu_tv"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/tt_robot_str" />
+
+        <TextView
+            style="@style/persion_item_menu_tv"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text=""
+            android:textColor="@color/right_tip_textcolor" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tt_robot_rl"
+        android:background="@color/view_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/tt_kefu_rl"
+        style="@style/layout_item"
+        android:layout_below="@id/view2" >
+
+        <TextView
+            style="@style/persion_item_menu_tv"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/kefu_str" />
+
+        <TextView
+            style="@style/persion_item_menu_tv"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text=""
+            android:textColor="@color/right_tip_textcolor" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tt_kefu_rl"
+        android:background="@color/view_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/help_rl"
+        style="@style/layout_item"
+        android:layout_below="@id/view3" >
+
+        <TextView
+            style="@style/persion_item_menu_tv"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_vertical"
+            android:text="@string/helper_str" />
+
+        <TextView
+            style="@style/persion_item_menu_tv"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text=""
+            android:textColor="@color/right_tip_textcolor" />
+    </RelativeLayout>
+
+</RelativeLayout>

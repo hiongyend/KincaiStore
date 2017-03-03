@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 实现按钮点击前后渐变颜色变化 -->
+    <item android:state_pressed="true"  
+        android:drawable="@drawable/clear_search_history_btn_bg_down" /> 
+    <item android:state_focused="true"  
+        android:drawable="@drawable/clear_search_history_btn_bg_up" /> 
+    <item android:drawable="@drawable/clear_search_history_btn_bg_up" />  
+
+</selector>

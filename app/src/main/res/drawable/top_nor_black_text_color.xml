@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true" android:color="@drawable/tab_textcolor_down"></item>
+    <item android:color="@drawable/top_black_textcolor_up"></item>
+
+</selector>

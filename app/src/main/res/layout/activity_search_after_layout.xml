@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/search_title_rl"
+    	android:layout_width="match_parent"
+    	android:layout_height="48dp" 
+    	android:visibility="gone"
+        layout="@layout/include_search_on_after_titlebar_layout"/>
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/search_title_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/network_abnormal_top_layout" >
+
+        <ListView
+            android:id="@+id/search_before_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#e8e6e6"
+            android:dividerHeight="0.5dp"
+            android:visibility="gone" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/search_on_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#e8e6e6"
+            android:dividerHeight="0.5dp"
+            android:visibility="gone" >
+        </ListView>
+        
+        <com.kincai.store.view.custom.HomeListview
+            android:id="@+id/search_after_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#e8e6e6"
+            android:dividerHeight="0.5dp"
+            android:fastScrollEnabled="true"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <include layout="@layout/loading_progress_big_layout" />
+    <ImageButton 
+        android:id="@+id/back_to_top_ib"
+        android:contentDescription="@string/androidimageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_back_to_top"/>
+
+</RelativeLayout>

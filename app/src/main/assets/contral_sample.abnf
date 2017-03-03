@@ -1,0 +1,8 @@
+#ABNF 1.0 gb2312;
+language zh-CN; 
+mode voice;
+
+root $main;
+$main = $place1 $place2 ;
+$place1 = 打开 | 关闭;
+$place2 = 电视 | 台灯 | 电脑 | 空调;

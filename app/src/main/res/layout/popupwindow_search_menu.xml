@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="#50000000"
+    android:orientation="vertical" >
+
+    <CheckedTextView
+        android:id="@+id/pwindow_recommend_ctv"
+        style="@style/checkedTextView_popupwindow"
+        android:checked="true"
+        android:text="@string/default_strs"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_line_color" />
+
+    <CheckedTextView
+        android:id="@+id/pwindow_price_low_to_high_ctv"
+        style="@style/checkedTextView_popupwindow"
+        android:text="@string/price_low_str"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_line_color" />
+
+    <CheckedTextView
+        android:id="@+id/pwindow_price_high_to_low_ctv"
+        style="@style/checkedTextView_popupwindow"
+        android:text="@string/price_height_str"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_line_color" />
+
+</LinearLayout>

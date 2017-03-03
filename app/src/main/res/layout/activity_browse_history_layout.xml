@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <Button
+        android:id="@+id/browse_clear_all_history_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="#00ffffff"
+        android:contentDescription="@string/action_settings"
+        android:padding="11dp"
+        android:text="@string/clear_all_str"
+        android:textColor="@drawable/top_nor_black_text_color"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <com.kincai.store.view.custom.HomeListview
+        android:id="@+id/browse_history_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:divider="#f0f0f0"
+        android:dividerHeight="0.2dp"
+        android:visibility="visible" >
+    </com.kincai.store.view.custom.HomeListview>
+
+    <include layout="@layout/loading_progress_big_layout" />
+
+</RelativeLayout>

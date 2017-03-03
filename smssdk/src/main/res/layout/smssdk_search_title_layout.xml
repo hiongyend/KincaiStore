@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:background="#e73b53" >
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="6dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_back_nor"
+            android:contentDescription="@string/smssdk_add_contact" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/ll_back"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/smssdk_choose_country"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="56dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/smssdk_add_contact"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/smssdk_search_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="9dp"
+        android:layout_toRightOf="@id/ll_back"
+        android:background="@drawable/smssdk_input_bg_focus"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="18dip"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/smssdk_add_contact"
+            android:scaleType="centerInside"
+            android:src="@drawable/smssdk_search_icon" />
+
+        <EditText
+            android:id="@+id/et_put_identify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/smssdk_search"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="17dp"
+            android:layout_height="17dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/edit_delete_normal"
+            android:contentDescription="@string/smssdk_add_contact"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_back"
+        android:background="#f0f0f0" />
+
+</RelativeLayout>

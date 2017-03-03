@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/merchants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/order_tb_icon_detail_shop"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/dialog_textcolr"
+        android:textSize="12sp" />
+
+</LinearLayout>

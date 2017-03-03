@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/tab_linearlayout_color"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_home"
+                style="@style/tab_btn"
+                android:drawableTop="@drawable/tab_index_btn"
+                android:onClick="onTabSelect"
+                android:text="@string/main_tab_home" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_cate"
+                style="@style/tab_btn"
+                android:drawableTop="@drawable/tab_cate_btn"
+                android:onClick="onTabSelect"
+                android:text="@string/main_tab_cate" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_cart"
+                style="@style/tab_btn"
+                android:drawableTop="@drawable/tab_cart_btn"
+                android:onClick="onTabSelect"
+                android:text="@string/main_tab_cart" />
+
+            <ImageView
+                android:id="@+id/iv_cart_tips"
+                style="@style/tab_tip_iv"
+                android:contentDescription="@string/androidimageview"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_persion"
+                style="@style/tab_btn"
+                android:drawableTop="@drawable/tab_me_btn"
+                android:onClick="onTabSelect"
+                android:text="@string/main_tab_persion" />
+
+            <ImageView
+                android:id="@+id/iv_persion_tips"
+                style="@style/tab_tip_iv"
+                android:contentDescription="@string/androidimageview"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/main_bottom"
+        android:background="@color/tab_viewline_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_view" />
+
+</RelativeLayout>

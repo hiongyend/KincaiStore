@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_color"
+        android:orientation="vertical" >
+
+        <include layout="@layout/include_titlebar_layout" />
+        
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/include_top_network_anomaly_layout" />
+
+        <TextView
+            android:id="@+id/man_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:text="@string/man_str" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/view_line_color" />
+
+        <TextView
+            android:id="@+id/woman_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:text="@string/woman_str" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/view_line_color" />
+
+        <TextView
+            android:id="@+id/secrecy_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:text="@string/secrecy_str" />
+    </LinearLayout>

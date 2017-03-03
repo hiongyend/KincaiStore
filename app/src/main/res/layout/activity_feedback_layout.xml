@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_pink_titlebar_layout" />
+
+    <Button
+        android:id="@+id/titlebar_send_suggestion_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#00ffffff"
+        android:contentDescription="@string/action_settings"
+        android:padding="11dp"
+        android:text="@string/submit_str"
+        android:textColor="@drawable/top_nor_white_text_color"
+        android:textSize="13sp" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:orientation="vertical"
+        android:padding="13dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_feedback_message"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="2dp"
+            android:background="#dcdada" />
+
+        <EditText
+            android:id="@+id/feedback_message_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="left"
+            android:hint=""
+            android:lines="6"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/content_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="2dp"
+            android:textColor="#c9c8c8"
+            android:textIsSelectable="false"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/you_email"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="2dp"
+            android:background="#dcdada" />
+
+        <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+            android:id="@+id/feedback_emails_et"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:drawableRight="@drawable/ic_search_cancel"
+            android:gravity="left"
+            android:hint=""
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <include layout="@layout/content_null_tip_layout" />
+
+</RelativeLayout>

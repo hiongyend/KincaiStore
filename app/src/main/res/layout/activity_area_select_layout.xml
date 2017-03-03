@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+    
+     <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <TextView
+        android:id="@+id/area_is_select_tv"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:textColor="@color/layout_textcolor"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/area_is_select_tv"
+        android:background="@color/view_line_color" />
+
+    <ListView
+        android:id="@+id/area_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view1"
+        android:divider="#e8e6e6"
+        android:dividerHeight="0.5dp"
+        android:visibility="visible" >
+    </ListView>
+
+</RelativeLayout>

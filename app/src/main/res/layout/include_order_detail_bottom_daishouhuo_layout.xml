@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white" >
+    
+    <Button 
+        android:id="@+id/daishouhuo_confirm_receive_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/confirm_receive_str"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:paddingLeft="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="9dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/dialog_btn_right_bg"/>
+    
+    <Button 
+        android:id="@+id/daishouhuo_wuliu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/chakan_wuliu_str"
+        android:layout_toLeftOf="@id/daishouhuo_confirm_receive_btn"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/dialog_textcolr"
+        android:textSize="13sp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/dialog_btn_left_bg"/>
+
+</RelativeLayout>

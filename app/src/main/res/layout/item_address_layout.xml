@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_listview_item_click_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="15dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="8dp"
+    android:paddingTop="15dp" >
+
+    <TextView
+        android:id="@+id/address_item_consignee_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/address_item_consignee_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="23dp"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/address_item_isdefault_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address_item_consignee_tv"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/approach_red"
+        android:textIsSelectable="false"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/address_item_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/address_item_consignee_tv"
+        android:layout_toRightOf="@id/address_item_isdefault_tv"
+        android:ellipsize="end"
+        android:layout_marginTop="2dp"
+        android:maxLines="3"
+        android:textIsSelectable="false"
+        android:textSize="14sp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/androidimageview"
+        android:src="@drawable/icon_arrow_right" />
+
+</RelativeLayout>

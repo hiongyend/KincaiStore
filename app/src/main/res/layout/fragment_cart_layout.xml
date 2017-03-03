@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <RelativeLayout
+        android:id="@+id/cart_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/activity_titlebar_bgcolor"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/cart_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/main_tab_cart"
+            android:textColor="@color/title_black_tv_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/cart_title_pro_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/cart_title_tv"
+            android:contentDescription="@string/action_settings"
+            android:gravity="center"
+            android:text="@string/cart_zero_str"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cart_tite_edit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/action_settings"
+            android:gravity="center"
+            android:padding="11dp"
+            android:text="@string/edit_all_str"
+            android:textColor="@drawable/top_nor_black_text_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cart_title_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <RelativeLayout
+        android:id="@+id/cart_tip_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:background="@color/fragment_color"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/cart_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="#605f5f"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/cart_tip_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="36dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/androidimageview"
+            android:src="@drawable/cart_empty_icon" />
+
+        <Button
+            android:id="@+id/cart_collect_not_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_below="@id/cart_tip_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/cart_collect_tip_btn_bg"
+            android:text="@string/at_once_str"
+            android:textColor="#605f5f"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/cart_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/activity_titlebar_bgcolor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/cart_all_choose_cb_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:contentDescription="@string/androidimageview"
+                android:id="@+id/cart_all_choose_cb_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_selltip_checkbox_normal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/all_choose_str"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_heji_ll"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_str"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cart_all_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pro_list_price_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_jiesuan_btn"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:background="@drawable/cart_bottom_button_bg"
+            android:text="@string/jiesuan_str"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.kincai.store.view.custom.RefreshExpandableListView
+        android:id="@+id/cart_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cart_bottom_ll"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:visibility="visible" />
+
+    <include layout="@layout/loading_progress_big_layout" />
+
+</RelativeLayout>

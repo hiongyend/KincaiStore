@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_titlebar_layout" />
+
+    <TextView
+        android:id="@+id/titlebar_confirm_change_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/action_settings"
+        android:gravity="center"
+        android:padding="11dp"
+        android:text="@string/confirm" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+        android:id="@+id/username_et"
+        style="@style/login_edittext"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:layout_marginTop="1dp"
+        android:drawableRight="@drawable/ic_search_cancel"
+        android:padding="12dp"
+        android:text=""
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/username_et"
+        android:contentDescription="@string/action_settings"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/change_username_tip_str" />
+
+</RelativeLayout>

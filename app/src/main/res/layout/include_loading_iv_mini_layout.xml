@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_iv_mini_half_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/persion_above_click_bg"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/loading_iv_mini_half"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/androidimageview"
+        android:src="@drawable/load_progress" />
+
+</RelativeLayout>

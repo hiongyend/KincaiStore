@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自定义progressbar的图片旋转 （小）  不要在rotate节点下 android:drawable="@drawable/load_refresh_sel" 这样会有问题：
+	就是旋转不均匀  		应该使用bitmap在下面 -->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    >
+      <bitmap android:src="@drawable/load_refresh_sel">
+          
+      </bitmap>
+
+</rotate>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <TextView
+        android:id="@+id/contact_us_official_website_tv"
+        style="@style/contact_us_textview"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:layout_marginTop="5dp"
+        android:text="@string/official_website_str" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/contact_us_official_website_tv"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/contact_us_qq_tv"
+        style="@style/contact_us_textview"
+        android:layout_below="@id/view1"
+        android:text="@string/kefu_qq_str" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/contact_us_qq_tv"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/contact_us_business_mail_tv"
+        style="@style/contact_us_textview"
+        android:layout_below="@id/view2"
+        android:text="@string/business_mail_str" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/contact_us_business_mail_tv"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/contact_us_mail_tv"
+        style="@style/contact_us_textview"
+        android:layout_below="@id/view3"
+        android:text="@string/kefu_mail_str" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/contact_us_mail_tv"
+        android:background="@color/view_line_color" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <!-- 标题栏 -->
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <!-- 网络异常提示 -->
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <!-- tab -->
+    <include
+        android:id="@+id/order_tab_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/network_abnormal_top_layout"
+        layout="@layout/include_order_top_tab_layout" />
+
+    <ImageView
+        android:id="@+id/order_tabline_iv"
+        android:layout_width="66dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/order_tab_ll"
+        android:background="@color/approach_red"
+        android:contentDescription="@string/androidimageview" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/order_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/order_tabline_iv" />
+
+</RelativeLayout>

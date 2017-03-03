@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp" >
+
+    <Button
+        android:id="@+id/select_pro_number_jian_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/selector_pro_jian_select_bg" />
+
+    <TextView
+        android:id="@+id/select_pro_number_tv"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/select_pro_number_jian_btn"
+        android:background="@drawable/select_pro_number_bg"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/select_pro_number_jia_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_toRightOf="@id/select_pro_number_tv"
+        android:background="@drawable/selector_pro_jia_select_bg" />
+
+</RelativeLayout>

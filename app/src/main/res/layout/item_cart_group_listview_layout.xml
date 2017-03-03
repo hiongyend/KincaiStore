@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/white"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal" >
+	<LinearLayout
+        android:id="@+id/cart_item_group_pro_cb_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:contentDescription="@string/androidimageview"
+            android:id="@+id/cart_item_group_cb_iv"
+            android:layout_width="20dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_selltip_checkbox_normal"
+             />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/cart_item_group_edit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/action_settings"
+            android:gravity="center"
+            android:padding="11dp"
+            android:text="@string/edit_str"
+            android:textColor="@color/dialog_textcolr"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/cart_item_group_edit_tv"
+            android:background="@color/tab_viewline_color" />
+
+        <TextView
+            android:id="@+id/cart_item_merchants_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/view1"
+            android:layout_toRightOf="@id/cart_item_group_pro_cb_ll"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/order_tb_icon_detail_shop"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center_vertical"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text=""
+            android:textColor="@color/dialog_textcolr"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/include_no_order_tip_layout" />
+    
+    <include layout="@layout/loading_progress_big_layout" />
+
+    <com.kincai.store.view.custom.HomeListview
+        android:id="@+id/order_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp" />
+
+</RelativeLayout>

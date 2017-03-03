@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tb_shadow_overflow"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/top_menu_refresh_tv"
+        style="@style/top_menu_popupwindow"
+        android:drawablePadding="6dp"
+        android:drawableLeft="@drawable/mini_webview_refresh"
+        android:text="@string/top_menu_refresh_str" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/top_menu_search_tv"
+        style="@style/top_menu_popupwindow"
+        android:paddingLeft="14dp"
+        android:drawablePadding="6dp"
+         android:drawableLeft="@drawable/pd_more_search"
+        android:text="@string/top_menu_search_str" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/top_menu_home_tv"
+        style="@style/top_menu_popupwindow"
+        android:paddingLeft="12dp"
+         android:drawableLeft="@drawable/pd_more_home"
+        android:text="@string/top_menu_home_str" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/top_menu_share_tv"
+        style="@style/top_menu_popupwindow"
+        android:paddingLeft="14dp"
+         android:drawableLeft="@drawable/pd_more_share"
+        android:text="@string/top_menu_share_str" />
+
+</LinearLayout>

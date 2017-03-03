@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/robot_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_btn_left_bg_down"
+            android:padding="5dp"
+            android:text="@string/send_str"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/robot_et"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@id/robot_send_btn"
+            android:background="@drawable/gray_search_et_bg"
+            android:inputType="text"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/robot_listview"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="3dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_rl"
+        android:divider="@color/transparent"
+        
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:background="@color/fragment_color"
+        android:cacheColorHint="@color/fragment_color" >
+    </ListView>
+
+</RelativeLayout>

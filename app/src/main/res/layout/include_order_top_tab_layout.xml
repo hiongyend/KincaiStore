@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/order_tab_all_tv"
+        style="@style/order_tab_tv"
+        android:text="@string/all_str" />
+
+    <TextView
+        android:id="@+id/order_tab_no_payment_tv"
+        style="@style/order_tab_tv"
+        android:text="@string/goods_no_payment_str" />
+
+    <TextView
+        android:id="@+id/order_tab_no_shipments_tv"
+        style="@style/order_tab_tv"
+        android:text="@string/goods_no_shipments_str" />
+
+    <TextView
+        android:id="@+id/order_tab_no_receive_tv"
+        style="@style/order_tab_tv"
+        android:text="@string/goods_no_receive_str" />
+
+    <TextView
+        android:id="@+id/order_tab_no_evaluation_tv"
+        style="@style/order_tab_tv"
+        android:text="@string/goods_no_evaluation_str" />
+
+</LinearLayout>

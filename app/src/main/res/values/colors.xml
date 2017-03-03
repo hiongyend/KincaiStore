@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_textcolor">#ffffff</color>
+    <color name="activity_title_textcolor">#ffffff</color>
+    <color name="title_black_tv_color">#0c0c0c</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="ban_touming">#50000000</color>
+    <color name="tab_linearlayout_color">#fffdfdfd</color>
+    <color name="tab_viewline_color">#e9e9ea</color>
+    <drawable name="tab_viewline_color_d">#000</drawable>
+    <color name="fragment_color">#f4f4f4</color>
+    
+    <color name="hong1">#ce0219</color>
+    <color name="hong2">#dc2623</color>
+    <color name="hei1">#323232</color>
+    <color name="gray200">#f8f8f8</color>
+    <color name="dialog_textcolr">#4c4c4c</color>
+    <color name="pro_pullup_details_bg">#eeeeee</color>
+    <color name="user_integral_bg">#e6455c</color>
+    <color name="user_bg">#e24057</color>
+    <color name="user_pink_line">#e44d63</color>
+    
+    <color name="fragment_persion_title_bg">#FF4aa7f0</color>
+    <color name="persion_above_the_rest_textcolor">#ffffff</color>
+    <color name="persion_above_the_rest_bgcolor">#f02056</color>
+    <color name="layout_textcolor">#636363</color>
+    <color name="right_tip_textcolor">#969696</color>
+    <color name="login_edittext">#a3a3a4</color>
+    <color name="reginster_info_bgcolor">#FFf7f7f7</color>
+    
+    <color name="view_line_color">#f0f0f0</color>
+    <color name="activity_titlebar_bgcolor">#fcfcfc</color>
+    <color name="btn_red_pressed_color">#d2253d</color>
+    <color name="btn_red_no_color">#e73b53</color>
+    <color name="titlebar_bg_color">#e73b53</color>
+    <color name="pro_list_price_color">#e73b53</color>
+    
+    <color name="transparent">#0fff</color>
+    <color name="approach_red">#e73b53</color>
+    <color name="approach_black">#6b6b6b</color>
+    
+    
+    <color name="pro_list_evaluate_color">#6b6b6b</color>
+    
+    <color name="search_listview_item_color">#2f2f2f</color>
+    <color name="exit_login_color">#FFe73b53</color>
+    <color name="listview_default">#fff4f4f4</color>
+    <color name="listview_item_pressed">#e1e0e0</color>
+    
+    <color name="gray">#828181</color>
+    <color name="v_text_color_84">#ff848484</color>
+    <color name="refresh_text_color">#999999</color>
+    
+    <drawable name="tab_textcolor_down">#e73b53</drawable>
+    <drawable name="tab_textcolor_up">#828181</drawable>
+    
+    <drawable name="top_black_textcolor_up">#000000</drawable>
+    <drawable name="top_white_textcolor_up">#ffffff</drawable>
+    
+    <drawable name="transparent">#0fff</drawable>
+</resources>

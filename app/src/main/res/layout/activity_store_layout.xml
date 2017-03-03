@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/titlebar_bg" >
+
+        <ImageView
+            android:id="@+id/titlebar_back_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/title_backward_bg"
+            android:contentDescription="@string/action_settings"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/store_search_et"
+            style="@style/clear_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="false"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/titlebar_back_iv"
+            android:background="@color/white"
+            android:drawableRight="@null"
+            android:hint="@string/store_search_str"
+            android:paddingLeft="0dp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <include
+        android:id="@+id/store_data_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/network_abnormal_top_layout"
+        layout="@layout/item_store_header_layout" />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/store_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/store_data_rl" />
+
+    <!--
+         <com.kincai.store.view.custom.HomeListview
+        android:id="@+id/store_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:divider="#e8e6e6"
+        android:dividerHeight="0.5dp"
+        android:visibility="visible" />
+    -->
+
+</RelativeLayout>

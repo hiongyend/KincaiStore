@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/titlebar_rl"
+        android:background="@color/view_line_color" />
+    
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <TextView
+        android:id="@+id/edit_address_consignee_tv"
+        style="@style/add_address_textview"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:text="@string/consignee_str" />
+
+    <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+        android:id="@+id/edit_address_consignee_et"
+        style="@style/add_address_edittext"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:layout_toRightOf="@id/edit_address_consignee_tv"
+        android:drawableRight="@drawable/ic_search_cancel" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/edit_address_consignee_tv"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/edit_address_phoneNum_tv"
+        style="@style/add_address_textview"
+        android:layout_below="@id/view1"
+        android:text="@string/phoneNum_str" />
+
+    <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+        android:id="@+id/edit_address_phoneNum_et"
+        style="@style/add_address_edittext"
+        android:layout_below="@id/view1"
+        android:layout_toRightOf="@id/edit_address_phoneNum_tv"
+        android:drawableRight="@drawable/ic_search_cancel"
+        android:inputType="phone" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/edit_address_phoneNum_tv"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/edit_address_postalCode_tv"
+        style="@style/add_address_textview"
+        android:layout_below="@id/view2"
+        android:text="@string/postalCode_str" />
+
+    <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+        android:id="@+id/edit_address_postalCode_et"
+        style="@style/add_address_edittext"
+        android:layout_below="@id/view2"
+        android:layout_toRightOf="@id/edit_address_postalCode_tv"
+        android:drawableRight="@drawable/ic_search_cancel"
+        android:inputType="number" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/edit_address_postalCode_tv"
+        android:background="@color/view_line_color" />
+
+    <LinearLayout
+        android:id="@+id/area_ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view3"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/area_str"
+            android:textColor="@color/layout_textcolor"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/edit_address_area_tv"
+            style="@style/add_address_textview"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:textColor="@color/black"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/area_ll"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/edit_address_detailedAddress_tv"
+        style="@style/add_address_textview"
+        android:layout_below="@id/view4"
+        android:text="@string/detailedAddress_str" />
+
+    <com.kincai.store.view.custom.CleanableAndVoiceEditTextView
+        android:id="@+id/edit_address_detailedAddress_et"
+        style="@style/add_address_edittext"
+        android:layout_below="@id/view4"
+        android:layout_toRightOf="@id/edit_address_detailedAddress_tv"
+        android:drawableRight="@drawable/ic_search_cancel" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/edit_address_detailedAddress_tv"
+        android:background="@color/view_line_color" />
+
+    <TextView
+        android:id="@+id/edit_address_shezhi_moren_tv"
+        style="@style/add_address_textview"
+        android:layout_below="@id/view5"
+        android:text="@string/shezhi_moren_str"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/edit_address_shezhi_moren_cb"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/view5"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/checkbox_select_bg"
+        android:button="@null"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/edit_address_delete_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_address_shezhi_moren_tv"
+        android:background="@drawable/edit_address_delete_click_bg"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:text="@string/edit_delete_str"
+        android:textColor="@color/btn_red_pressed_color" />
+
+    <Button
+        android:id="@+id/edit_address_save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/dialog_btn_right_bg"
+        android:text="@string/save_str"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

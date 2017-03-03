@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+    
+     <Button
+        android:id="@+id/titlebar_integral_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#00ffffff"
+        android:contentDescription="@string/action_settings"
+        android:padding="11dp"
+        android:text="@string/get_integral_str"
+        android:textColor="@drawable/top_black_textcolor_up"
+        android:textSize="13sp" />
+    
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlebar_rl"
+        layout="@layout/include_top_network_anomaly_layout" />
+    
+    <TextView 
+        android:id="@+id/user_integral_tv"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:text="@string/user_integral_str"/>
+    <TextView 
+        android:id="@+id/user_integral_tvs"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:textColor="@color/approach_red"
+        android:layout_toRightOf="@id/user_integral_tv"
+        android:layout_height="wrap_content"
+        android:text=""/>
+    
+     <com.kincai.store.view.custom.HomeListview
+        android:id="@+id/integral_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/user_integral_tv"
+        android:divider="#e8e6e6"
+        android:dividerHeight="0.3dp"
+        android:fastScrollEnabled="true" />
+     
+     <include layout="@layout/loading_progress_big_layout"/>
+
+</RelativeLayout>

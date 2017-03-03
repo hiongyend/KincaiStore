@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/store_logo_iv"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:contentDescription="@string/androidimageview"
+                android:scaleType="fitXY"
+                android:src="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/store_attent_num_tv"
+                android:layout_toRightOf="@id/store_logo_iv"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/store_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="店铺名称"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/store_attent_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="粉丝数"
+                    android:textColor="@color/layout_textcolor"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/store_xinyong_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="@string/androidimageview" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="店铺号"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="所在地"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="好评率"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_haoping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="开店时间"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="描述相符"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_miaoshu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/approach_red"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="服务态度"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_fuwutaidu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/approach_red"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="物流服务"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_wuliufuwu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/approach_red"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="掌柜名"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_zhanggui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="服务电话"
+                android:textColor="@color/layout_textcolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/store_fuwudianhua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

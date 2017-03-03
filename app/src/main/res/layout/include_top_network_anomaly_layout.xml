@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/network_abnormal_top_layout"
+    android:background="@drawable/fragment_network_state_tip_bg"
+    android:visibility="gone"
+     >
+    
+    <ImageView 
+        android:contentDescription="@string/androidimageview"
+        android:id="@+id/fragment_nerwork_state_iv"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/app_network_icon"
+        android:layout_marginLeft="10dp"
+        />
+    
+    <TextView 
+        android:id="@+id/fragment_nerwork_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fragment_nerwork_state_iv"
+        android:textColor="#f2f2f2"
+        android:textSize="14sp"
+        android:text="@string/network_abnormal_tip_str1"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        />
+    <ImageView 
+        android:contentDescription="@string/androidimageview"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/app_network_arrow"
+        android:layout_marginRight="10dp"
+        />
+
+</RelativeLayout>

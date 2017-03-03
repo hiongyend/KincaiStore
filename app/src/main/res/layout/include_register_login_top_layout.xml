@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_ll"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/user_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/titlebar_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shutdown_bg"
+        android:contentDescription="@string/action_settings"
+        android:padding="11dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:src="@drawable/virtual_title_shutdown" />
+
+    <com.kincai.store.view.custom.CircleImageView
+        android:id="@+id/register_login_logo_iv"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_useraccount_headview"
+        app:border_color="@color/white"
+        app:border_width="0dp" />
+
+    <TextView
+        android:id="@+id/regiser_login_top_logo_below_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

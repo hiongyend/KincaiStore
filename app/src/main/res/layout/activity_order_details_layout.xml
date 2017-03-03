@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color" >
+
+    <include
+        android:id="@+id/titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/include_titlebar_layout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/titlebar_rl"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/view_line_color" />
+
+    <include
+        android:id="@+id/network_abnormal_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view"
+        layout="@layout/include_top_network_anomaly_layout" />
+
+    <RelativeLayout
+        android:id="@+id/order_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp" >
+
+        <include
+            android:id="@+id/order_detail_bottom_daizhifu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_order_detail_bottom_daizhifu_layout"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/order_detail_bottom_daifahuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_order_detail_bottom_daifahuo_layout"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/order_detail_bottom_daishouhuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_order_detail_bottom_daishouhuo_layout"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/order_detail_bottom_daipingjia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_order_detail_bottom_daipingjia_layout"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/order_detail_bottom_guanbi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_order_detail_bottom_guanbi_layout"
+            android:background="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/order_detail_bottom"
+        android:background="@color/view_line_color" />
+
+    <ExpandableListView
+        android:id="@+id/order_detail_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view8"
+        android:background="@color/white"
+        android:layout_below="@id/network_abnormal_top_layout"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:visibility="visible" />
+
+</RelativeLayout>

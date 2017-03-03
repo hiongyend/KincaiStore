@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            layout="@layout/include_top_network_anomaly_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/user_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/titlebar_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shutdown_bg"
+                android:contentDescription="@string/action_settings"
+                android:padding="11dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/virtual_title_shutdown" />
+
+            <com.kincai.store.view.custom.CircleImageView
+                android:id="@+id/user_change_face_iv"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/ic_useraccount_headview"
+                app:border_color="@color/white"
+                app:border_width="1.5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/change_face_str"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_nick_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                style="@style/user_info_item_menu_tv"
+                android:layout_marginLeft="5dp"
+                android:text="@string/user_tv_str" />
+
+            <TextView
+                android:id="@+id/user_nick_tv"
+                style="@style/persion_item_menu_tv"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:drawableRight="@drawable/icon_arrow_right"
+                android:text=""
+                android:textColor="@color/right_tip_textcolor"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/user_sex_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                style="@style/user_info_item_menu_tv"
+                android:layout_marginLeft="5dp"
+                android:text="@string/user_sex_str" />
+
+            <TextView
+                android:id="@+id/user_sex_tv"
+                style="@style/persion_item_menu_tv"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:drawableRight="@drawable/icon_arrow_right"
+                android:text=""
+                android:textColor="@color/right_tip_textcolor"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/user_consignee_address_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                style="@style/user_info_item_menu_tv"
+                android:layout_marginLeft="5dp"
+                android:text="@string/user_consingle_address_str" />
+
+            <TextView
+                style="@style/persion_item_menu_tv"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:drawableRight="@drawable/icon_arrow_right"
+                android:text=""
+                android:textColor="@color/right_tip_textcolor"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/view_line_color" />
+
+        <CheckedTextView
+            android:id="@+id/user_change_password_ctv"
+            style="@style/checkedTextView_setting"
+            android:checkMark="@drawable/pwd_toggle_button_selector"
+            android:checked="false"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/user_password_change_str"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line_color" />
+
+        <ViewStub
+            android:id="@+id/ViewStub_paw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/viewstub_userinfo_paw_layout" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_line_color" />
+        <CheckedTextView
+                android:id="@+id/lock_pwd_ctv"
+                style="@style/checkedTextView_setting"
+                android:checked="false"
+                android:text="手势密码" />
+        
+        
+        <RelativeLayout
+            android:id="@+id/user_change_lock_pwd_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/persion_layout_click_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                style="@style/user_info_item_menu_tv"
+                android:layout_marginLeft="5dp"
+                android:text="修改手势密码" />
+
+            <TextView
+                style="@style/persion_item_menu_tv"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:drawableRight="@drawable/icon_arrow_right"
+                android:text=""
+                android:textColor="@color/right_tip_textcolor"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

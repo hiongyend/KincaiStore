@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/cate_item_ll"
+    android:layout_height="match_parent" >
+    
+
+    <TextView
+        android:id="@+id/cate_item_lv_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dip"
+        android:layout_centerInParent="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@drawable/cate_listview_item_text_selector"
+        android:textIsSelectable="false"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/cate_item_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/cate_item_lv_tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7.5dip"
+        android:background="#ffe5e5e5"
+        android:visibility="invisible" />
+
+</RelativeLayout>

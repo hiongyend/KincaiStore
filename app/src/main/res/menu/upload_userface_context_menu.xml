@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/upload_userface_menu_photograph"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/photograph_str"/>
+
+    <item
+        android:id="@+id/upload_userface_menu_photo_album"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/photo_album_str"/>
+
+</menu>
